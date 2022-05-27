@@ -28,13 +28,9 @@ app.get('/card/:id', (req, res) => {
     const card = cards[0].find(u => u.id === +id);
     
     if (!card) {
-        res.status(404).json("Not found gulu")
-        console.log(card)
-        console.log(cards);
+        res.status(404).json("Not found gulu");
     }
-    res.json(card)
-    console.log(card)
-    console.log(cards);
+    res.json(card);
 });
 
 app.listen(PORT, () => {
